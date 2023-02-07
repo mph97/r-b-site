@@ -1,0 +1,220 @@
+*{ box-sizing: border-box; }
+
+body{
+    background-color: #FFFFFF;
+    color: #42454C;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#wrapper { 
+    background-color: #6360E9;
+    background-image: linear-gradient(to bottom, #FFFFFF, #6360E9);
+    }
+
+header{
+    background-color: #356DB1;
+    color: #FFFFFF;
+    background-image: url(mic2.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 80px;
+    text-align: center;
+    padding-top: 17px;
+}
+header a{text-decoration: none;}
+header a:link{ color: #FFFFFF;}
+header a:visited{ color: #FFFFFF;}
+header a:hover{ color: #90c7e3;}
+
+h1{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+nav{
+
+    font-weight: bold;
+    text-align: center;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    font-size: 1.2em;
+}
+
+nav li{ border-bottom: 1px solid #000033;}
+
+nav a{
+    text-decoration: none;
+}
+
+nav a:link{
+	color: #5C7fa3;
+}
+nav a:visited{
+	color: #344873;
+}
+nav a:hover{
+	color: #A52a2a;
+}
+
+main{
+	background-color: #FFFFFF;
+    padding: 1px 20px 20px 20px;
+    display: block;
+    padding-left: 30px;
+    overflow: auto;
+}
+main h1{color: #396BA6;}
+
+h2{
+    color: #1557A5;
+    font-family: Georgia, 'Times New Roman', serif;
+    text-shadow: 1px 1px 1px #CCCCCC;
+}
+h3{ color: #000033;
+	font-family: Georgia, 'Times New Roman', serif;
+}
+
+figure { 
+	display: inline-block;
+	width: 245px;
+	padding-bottom: 10px;
+	background-color: #EAEAEA;
+}
+figcaption { 
+	text-align: center;
+	font-style: italic;
+	font-family: Georgia, serif; 
+}
+
+form{
+    display: flex;
+    flex-direction: column; flex-wrap: nowrap;
+}
+
+input, textarea { margin-bottom: .5em;}
+
+table {
+	border: 2px solid #1B5294;
+	border-collapse: collapse;
+}
+
+td, th {
+	padding: 0.5em;
+	border: 2px solid #1B5294;
+}
+
+td { text-align: center;}
+
+tr:nth-of-type(odd){
+	background-color: #D7E7EE;
+}
+
+
+footer{
+	background-color: #FFFFFF;
+    font-size: 75%;
+    font-style: italic;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', serif;
+    padding: 2em;
+}
+
+.rnb{
+    color: #1557A5;
+    font-weight: bold;
+}
+
+#homehero{
+    height: 300px;
+    background-image: url(rnbhero.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+video {
+	float: right;
+	margin: 1em;
+}
+
+@media (min-width: 600px){
+	nav ul{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+	}
+
+	nav li{
+		border-bottom: none;
+	}
+
+	section{
+		margin-left: 2em;
+		margin-right: 2em;
+		flex: 1;
+	}
+
+	.flow{
+		display: flex;
+		flex-direction: row;
+	}
+	form{
+		display: grid;
+		gap: 1em;
+		grid-template-columns: 6em 1fr;
+		width: 50%; max-width: 30em;
+	}
+	input[type="submit"]{
+		grid-column: 2/3; width: 9em;
+	}
+}
+
+@media (min-width: 1024px) {
+	#wrapper{
+		margin: auto;
+		width: 80%;
+		border: 1px solid #002171;
+		box-shadow: 3px 3px 3px #002171;
+	}
+	nav{
+		text-align: center;
+		padding-left: 1em;
+	}
+	@supports (display: grid){
+		nav ul{
+			flex-direction: column;
+			padding-top: 1em;
+		}
+		.hero{
+			grid-area: hero;
+		}
+		header{
+			grid-area: header;
+		}
+		nav{
+			grid-area: nav;
+		}
+		main{
+			grid-area: main;
+		}
+		footer{
+			grid-area: footer;
+		}
+		#wrapper{
+			display: grid;
+			grid-template: 
+			"header header"
+			"nav hero"
+			"nav main"
+			"nav footer"
+			/180px 1fr;
+		}
+	}
+
+}

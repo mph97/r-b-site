@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>For the Love of R&amp;B :: Sign Up</title>
+<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=devide-width, initial-scale=1.0">
+</head>
+<body>
+<div id="wrapper">
+<header>
+    <a href="index.html"><h1>For the Love of R&amp;B</h1></a>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="problem.html">Problem</a></li>
+        <li><a href="staternb.html">State of R&B</a></li>
+        <li><a href="performances.html">Performances</a></li>
+        <li><a href="playlists.html">Playlists</a></li>
+        <li><a href="outlets.html">Media Outlets</a></li>
+        <li><a href="signup.html">Sign-Up</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h2>Sign Up Today</h2>
+    <h3>Get updates on new releases, playlists, and more</h3>
+    <p>Required fields are marked with an asterisk*</p>
+    <form method="post"
+          action="https://webdevbasics.net/scripts/demo.php">
+        <label for="fName">*First Name:</label>
+        <input type="text" name="fName" id="fName" required>
+        <label for="lName">*Last Name:</label>
+        <input type="text" name="lName" id="lName" required>
+        <label for="email">*E-Mail:</label>
+        <input type="email" name="email" id="email" required>
+        Streaming Service:
+        <select name="streamer">
+            <option value="appleMusic">Apple Music</option>
+            <option value="spotify">Spotify</option>
+            <option value="tidal">Tidal</option>
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+
+</main>
+
+<footer>
+    <small><i>Copyright &copy; 2022 For the Love of R&amp;B<br>
+        <a href="mailto:mphollan@asu.edu">mphollan@asu.edu</a>
+    </i></small><br>
+</footer>
+</div>
+</body>
+</html>
